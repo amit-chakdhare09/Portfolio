@@ -3,99 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Liquid Gradient</title>
+    <title>Amit Omprakash Chakdhare | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1 class="heading option1">Liquid Gradient</h1>
-
-    <div class="color-controls">
-      <button class="color-btn active" data-scheme="1">Scheme 1</button>
-      <button class="color-btn" data-scheme="2">Scheme 2</button>
-      <button class="color-btn" data-scheme="3">Scheme 3</button>
-      <button class="color-btn" data-scheme="4">Scheme 4</button>
-      <button class="color-btn" data-scheme="5">Scheme 5</button>
+    <div class="parallax-scene" aria-hidden="true">
+      <div class="orb orb-1" data-parallax-layer="0.08"></div>
+      <div class="orb orb-2" data-parallax-layer="0.14"></div>
+      <div class="orb orb-3" data-parallax-layer="0.2"></div>
     </div>
 
-    <button class="toggle-adjuster-btn" id="toggleAdjusterBtn">Adjust Colors</button>
+    <header class="site-header">
+      <a class="brand" href="#home">Amit Chakdhare</a>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#toolkit">Toolkit</a>
+        <a href="#sectionPin">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-    <div class="color-adjuster-panel" id="colorAdjusterPanel">
-      <div class="color-adjuster-header">
-        <h3 class="color-adjuster-title">Color Adjuster</h3>
-        <button class="color-adjuster-close" id="closeAdjusterBtn">&times;</button>
-      </div>
+    <div class="container" id="home" data-scroll-container>
+      <main class="portfolio">
+        <section class="hero card">
+          <div class="hero-layout">
+            <div class="hero-text">
+              <p class="eyebrow">Computer Vision Engineer</p>
+              <h1>Amit Omprakash Chakdhare</h1>
+              <p class="lead">
+                Computer Vision Engineer and AI Developer passionate about building intelligent systems. I specialize in OpenCV,
+                Python, and machine learning to solve real-world problems.
+              </p>
+              <div class="hero-actions">
+                <a class="btn" href="#sectionPin">View Projects</a>
+                <a class="btn ghost" href="#contact">Contact Me</a>
+              </div>
+            </div>
+            <div class="hero-images">
+              <img src="./assets/hero-image-1.jpeg" alt="Blossoming tree under a blue sky" />
+              <img src="./assets/hero-image-2.jpeg" alt="Soft floral image with blue and pink tones" />
+            </div>
+          </div>
+        </section>
 
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 1</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker1" data-color="1" />
-          <input type="text" class="color-value-display" id="colorValue1" readonly />
-          <button class="copy-btn" data-copy="1">Copy</button>
+        <section class="card" id="about">
+          <div class="about-layout">
+            <div class="about-image-wrap">
+              <img src="./assets/section2-image.jpeg" alt="Soft floral blur artwork for about section" />
+            </div>
+            <div class="about-text">
+              <h2>About</h2>
+              <p>
+                Hello! I'm Amit, a developer with a deep passion for turning complex challenges into elegant code. My expertise
+                lies at the intersection of computer vision, machine learning, and practical software development.
+              </p>
+              <p>
+                I thrive on building projects that push boundaries, from advanced 3D object detection systems that understand
+                the world to real-time hazard detection for automotive safety. I'm equally comfortable working on the
+                algorithm behind an AR gesture control system and the full-stack application that brings it to life.
+              </p>
+              <p>
+                My current interests are leading me to explore the exciting applications of AI in space technology and beyond.
+                I believe in continuous learning, clean code, and the power of open source.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="toolkit">
+          <div class="toolkit-layout">
+            <div class="toolkit-text">
+              <h2>My Toolkit</h2>
+              <div class="chip-grid">
+                <span>Python</span>
+                <span>OpenCV</span>
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Machine Learning</span>
+                <span>Computer Vision</span>
+              </div>
+            </div>
+            <div class="toolkit-image-wrap">
+              <img src="./assets/section3-image.jpeg" alt="Textured floral image for toolkit section" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section id="sectionPin" class="horizontal-section">
+        <div class="pin-wrap">
+          <article class="project-panel">
+            <h2>Projects</h2>
+            <p>Scroll down to move sideways through selected work.</p>
+          </article>
+          <article class="project-panel">
+            <h3>Integrated-Object-Pose-Detection-Pipeline</h3>
+            <p>Your most popular repository focused on object pose detection in Python.</p>
+            <span>Python</span>
+          </article>
+          <article class="project-panel">
+            <h3>Lane-Detection-Object-Hazard-System</h3>
+            <p>A Jupyter Notebook project for lane detection and hazard-aware insights.</p>
+            <span>Jupyter Notebook</span>
+          </article>
+          <article class="project-panel">
+            <h3>Enhanced-MediaPipe-Pose-Estimation</h3>
+            <p>Computer vision work extending pose estimation pipelines using Python.</p>
+            <span>Python</span>
+          </article>
+          <article class="project-panel">
+            <h3>Hello-Sakhi</h3>
+            <p>A web-based project built with HTML and practical frontend development.</p>
+            <span>HTML</span>
+          </article>
+          <article class="project-panel">
+            <h3>Photo_Studio</h3>
+            <p>A JavaScript-based creative project around media-focused interactions.</p>
+            <span>JavaScript</span>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 2</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker2" data-color="2" />
-          <input type="text" class="color-value-display" id="colorValue2" readonly />
-          <button class="copy-btn" data-copy="2">Copy</button>
-        </div>
-      </div>
+      <main class="portfolio portfolio-bottom">
+        <section class="card" id="contact">
+          <h2>Contact</h2>
+          <p>Let's collaborate on intelligent systems, computer vision, or AI-driven products.</p>
+          <div class="links">
+            <a href="https://github.com/amit-chakdhare09" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/amit-chakdhare-320150339" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </section>
+      </main>
 
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 3</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker3" data-color="3" />
-          <input type="text" class="color-value-display" id="colorValue3" readonly />
-          <button class="copy-btn" data-copy="3">Copy</button>
-        </div>
-      </div>
-
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 4</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker4" data-color="4" />
-          <input type="text" class="color-value-display" id="colorValue4" readonly />
-          <button class="copy-btn" data-copy="4">Copy</button>
-        </div>
-      </div>
-
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 5</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker5" data-color="5" />
-          <input type="text" class="color-value-display" id="colorValue5" readonly />
-          <button class="copy-btn" data-copy="5">Copy</button>
-        </div>
-      </div>
-
-      <div class="color-picker-group">
-        <div class="color-picker-label"><span>Color 6</span></div>
-        <div class="color-picker-wrapper">
-          <input type="color" class="color-picker-input" id="colorPicker6" data-color="6" />
-          <input type="text" class="color-value-display" id="colorValue6" readonly />
-          <button class="copy-btn" data-copy="6">Copy</button>
-        </div>
-      </div>
-
-      <div class="color-adjuster-actions">
-        <button class="export-btn" id="exportAllBtn">Export All Colors</button>
-      </div>
+      <footer class="site-footer">Built by Amit Omprakash Chakdhare</footer>
     </div>
 
-    <footer class="footer">
-      <a href="https://madebybeings.com" target="_blank" rel="noopener noreferrer">Made By Beings</a>
-    </footer>
-
+    <div class="corner-gif-wrap">
+      <img class="corner-gif" src="./assets/corner-mascot.gif" alt="Pixel mascot animation" />
+    </div>
     <div class="custom-cursor" id="customCursor"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./script.js"></script>
   </body>
