@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Amit Omprakash Chakdhare portfolio showcasing computer vision and AI engineering projects."
+    />
     <title>Amit Omprakash Chakdhare | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,9 +33,9 @@
       </button>
       <nav class="main-nav" id="mainNav" aria-label="Primary">
         <span class="nav-slider" aria-hidden="true"></span>
-        <a href="#home" class="active">Home</a>
+        <a href="#home" class="active" aria-current="page">Home</a>
         <a href="#about">About</a>
-        <a href="#toolkit">Toolkit</a>
+        <a href="#toolkit">Skills</a>
         <a href="#sectionPin">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -51,12 +55,12 @@
               <div class="hero-actions">
                 <a class="btn" href="#sectionPin">View Projects</a>
                 <a class="btn ghost" href="#contact">Contact Me</a>
-                <a class="btn ghost" href="./assets/Amit_Chakdhare_Resume.pdf" download>Download Resume</a>
+                <a class="btn ghost" id="resumeButton" href="./assets/Amit_Chakdhare_Resume.pdf" download>Download Resume</a>
               </div>
             </div>
             <div class="hero-images">
-              <img src="./assets/hero-image-1.jpeg" alt="Blossoming tree under a blue sky" />
-              <img src="./assets/hero-image-2.jpeg" alt="Soft floral image with blue and pink tones" />
+              <img src="./assets/hero-image-1.jpeg" alt="Blossoming tree under a blue sky" decoding="async" />
+              <img src="./assets/hero-image-2.jpeg" alt="Soft floral image with blue and pink tones" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -64,7 +68,7 @@
         <section class="card" id="about">
           <div class="about-layout">
             <div class="about-image-wrap">
-              <img src="./assets/section2-image.jpeg" alt="Soft floral blur artwork for about section" />
+              <img src="./assets/section2-image.jpeg" alt="Soft floral blur artwork for about section" loading="lazy" decoding="async" />
             </div>
             <div class="about-text">
               <h2>About</h2>
@@ -88,20 +92,82 @@
         <section class="card" id="toolkit">
           <div class="toolkit-layout">
             <div class="toolkit-text">
-              <h2>My Toolkit</h2>
-              <div class="chip-grid">
-                <span>Python</span>
-                <span>OpenCV</span>
-                <span>TensorFlow</span>
-                <span>PyTorch</span>
-                <span>TypeScript</span>
-                <span>React</span>
-                <span>Machine Learning</span>
-                <span>Computer Vision</span>
+              <h2>Skills</h2>
+              <div class="skills-groups">
+                <div class="skills-group">
+                  <h3>Frontend Development</h3>
+                  <div class="chip-grid">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>React</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h3>Backend &amp; Programming Languages</h3>
+                  <div class="chip-grid">
+                    <span>Python</span>
+                    <span>C++</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h3>Databases</h3>
+                  <div class="chip-grid">
+                    <span>MySQL</span>
+                    <span>PostgreSQL</span>
+                    <span>MongoDB</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h3>Machine Learning &amp; Data Science</h3>
+                  <div class="chip-grid">
+                    <span>PyTorch</span>
+                    <span>TensorFlow</span>
+                    <span>Keras</span>
+                    <span>Scikit-learn</span>
+                    <span>NumPy</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>OpenCV</span>
+                    <span>MediaPipe</span>
+                    <span>SciPy</span>
+                    <span>XGBoost</span>
+                    <span>LightGBM</span>
+                    <span>Data Preprocessing</span>
+                    <span>Feature Engineering</span>
+                    <span>Model Evaluation</span>
+                    <span>Deep Learning</span>
+                    <span>Computer Vision</span>
+                    <span>Natural Language Processing (NLP)</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h3>Cloud Platforms</h3>
+                  <div class="chip-grid">
+                    <span>AWS (Amazon Web Services)</span>
+                    <span>Google Cloud Platform</span>
+                  </div>
+                </div>
+
+                <div class="skills-group">
+                  <h3>Tools &amp; Development Environment</h3>
+                  <div class="chip-grid">
+                    <span>Jupyter Notebook</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>VS Code</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="toolkit-image-wrap">
-              <img src="./assets/section3-image.jpeg" alt="Textured floral image for toolkit section" />
+              <img src="./assets/section3-image.jpeg" alt="Textured floral image for skills section" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -213,13 +279,73 @@
             <span>Python</span>
           </article>
           <article class="project-panel">
-            <h3>Hello-Sakhi</h3>
-            <p>A web-based project built with HTML and practical frontend development.</p>
+            <div class="project-split">
+              <div class="project-summary">
+                <h3>Hello-Sakhi</h3>
+                <p>A women-focused portal with practical frontend development and an empowerment-first UX.</p>
+                <div class="project-links">
+                  <a
+                    class="repo-link"
+                    href="https://github.com/amit-chakdhare09/Hello-Sakhi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View GitHub Repo</a
+                  >
+                  <a
+                    class="repo-link live-link"
+                    href="https://main--hellosakhi.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Live Demo</a
+                  >
+                </div>
+              </div>
+              <div class="project-output">
+                <div class="project-media-shell">
+                  <img
+                    src="./assets/hello-sakhi.png"
+                    alt="Hello Sakhi live deployment preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
             <span>HTML</span>
           </article>
           <article class="project-panel">
-            <h3>Photo_Studio</h3>
-            <p>A JavaScript-based creative project around media-focused interactions.</p>
+            <div class="project-split">
+              <div class="project-summary">
+                <h3>Photo_Studio</h3>
+                <p>A JavaScript photo booth experience focused on creative filters and instant captures.</p>
+                <div class="project-links">
+                  <a
+                    class="repo-link"
+                    href="https://github.com/amit-chakdhare09/Photo_Studio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View GitHub Repo</a
+                  >
+                  <a
+                    class="repo-link live-link"
+                    href="https://amit-chakdhare09.github.io/Photo_Studio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View Live Demo</a
+                  >
+                </div>
+              </div>
+              <div class="project-output">
+                <div class="project-media-shell">
+                  <img
+                    src="./assets/photo-booth.png"
+                    alt="Photo Studio app live deployment preview"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
             <span>JavaScript</span>
           </article>
         </div>
@@ -238,7 +364,7 @@
               </div>
             </div>
             <div class="contact-image-wrap">
-              <img src="./assets/contact-image.jpeg" alt="Blue floral tree artwork for contact section" />
+              <img src="./assets/contact-image.jpeg" alt="Blue floral tree artwork for contact section" loading="lazy" decoding="async" />
             </div>
           </div>
         </section>
@@ -249,7 +375,7 @@
 
     <div class="corner-gif-wrap">
       <div class="meow-popup" id="meowPopup">meow</div>
-      <img class="corner-gif" src="./assets/corner-mascot.gif" alt="Pixel mascot animation" />
+      <img class="corner-gif" src="./assets/corner-mascot.gif" alt="Pixel mascot animation" tabindex="0" role="button" aria-label="Mascot says meow" />
     </div>
     <div class="custom-cursor" id="customCursor"></div>
 

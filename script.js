@@ -317,6 +317,35 @@ class App {
 
 new App();
 
+function initMediaSkeletons() {
+  const mediaNodes = document.querySelectorAll(
+    ".hero-images img, .about-image-wrap img, .toolkit-image-wrap img, .contact-image-wrap img, .project-media-shell img, .project-video-shell iframe"
+  );
+
+  const markReady = (node) => {
+    node.classList.add("is-ready");
+    const shell = node.closest(".project-media-shell, .project-video-shell");
+    if (shell) shell.classList.add("is-ready");
+  };
+
+  mediaNodes.forEach((node) => {
+    if (node.tagName === "IMG") {
+      if (node.complete && node.naturalWidth > 0) {
+        markReady(node);
+      } else {
+        node.addEventListener("load", () => markReady(node), { once: true });
+        node.addEventListener("error", () => markReady(node), { once: true });
+      }
+      return;
+    }
+
+    node.addEventListener("load", () => markReady(node), { once: true });
+    setTimeout(() => markReady(node), 4500);
+  });
+}
+
+initMediaSkeletons();
+
 let pageScroller = null;
 let navScrollLock = false;
 let navScrollLockTimer = null;
@@ -421,8 +450,12 @@ const navSlider = mainNav ? mainNav.querySelector(".nav-slider") : null;
 function setActiveNavLink(targetLink) {
   if (!mainNav || !targetLink) return;
   const links = mainNav.querySelectorAll("a");
-  links.forEach((link) => link.classList.remove("active"));
+  links.forEach((link) => {
+    link.classList.remove("active");
+    link.removeAttribute("aria-current");
+  });
   targetLink.classList.add("active");
+  targetLink.setAttribute("aria-current", "page");
 }
 
 function activateNavByHash(hash) {
@@ -437,8 +470,10 @@ function positionNavSlider(targetLink) {
   if (!mainNav || !navSlider || !targetLink || window.innerWidth <= 760) return;
   const navRect = mainNav.getBoundingClientRect();
   const targetRect = targetLink.getBoundingClientRect();
+  const sliderLeftInset = parseFloat(getComputedStyle(navSlider).left) || 0;
+  const translateX = targetRect.left - navRect.left - sliderLeftInset;
   navSlider.style.width = `${targetRect.width}px`;
-  navSlider.style.transform = `translateX(${targetRect.left - navRect.left}px)`;
+  navSlider.style.transform = `translateX(${translateX}px)`;
 }
 
 function setupNavSlider() {
@@ -453,6 +488,13 @@ function setupNavSlider() {
     const currentActive = mainNav.querySelector("a.active");
     if (currentActive) positionNavSlider(currentActive);
   });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      const currentActive = mainNav.querySelector("a.active");
+      if (currentActive) positionNavSlider(currentActive);
+    });
+  }
 }
 
 if (siteHeader && navToggle) {
@@ -488,6 +530,10 @@ function setupInternalAnchorScrolling() {
       if (!target) return;
 
       event.preventDefault();
+      if (window.location.hash !== hash) {
+        window.history.replaceState(null, "", hash);
+      }
+
       if (mainNav && mainNav.contains(link)) {
         setActiveNavLink(link);
         positionNavSlider(link);
@@ -550,6 +596,32 @@ if (cornerGif && meowPopup) {
   cornerGif.addEventListener("mouseenter", showMeowPopup);
   cornerGif.addEventListener("click", showMeowPopup);
   cornerGif.addEventListener("touchstart", showMeowPopup, { passive: true });
+  cornerGif.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      showMeowPopup();
+    }
+  });
+}
+
+const resumeButton = document.getElementById("resumeButton");
+if (resumeButton) {
+  const resumeHref = resumeButton.getAttribute("href");
+  fetch(resumeHref, { method: "HEAD" })
+    .then((response) => {
+      if (!response.ok) {
+        resumeButton.classList.add("is-disabled");
+        resumeButton.removeAttribute("download");
+        resumeButton.setAttribute("aria-disabled", "true");
+        resumeButton.title = "Resume will be added soon";
+      }
+    })
+    .catch(() => {
+      resumeButton.classList.add("is-disabled");
+      resumeButton.removeAttribute("download");
+      resumeButton.setAttribute("aria-disabled", "true");
+      resumeButton.title = "Resume will be added soon";
+    });
 }
 
 const cursor = document.getElementById("customCursor");
