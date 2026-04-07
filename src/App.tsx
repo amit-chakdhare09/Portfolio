@@ -62,10 +62,10 @@ function App() {
           <section className="hero card">
             <div className="hero-layout">
               <div className="hero-text">
-                <p className="eyebrow">Computer Vision Engineer</p>
+                <p className="eyebrow">Machine Learning Engineer</p>
                 <h1>Amit Omprakash Chakdhare</h1>
                 <p className="lead">
-                  Computer Vision Engineer and AI Developer passionate about building intelligent systems. I
+                  Artificial Intelligence Developer passionate about building intelligent systems. I
                   specialize in OpenCV, Python, and machine learning to solve real-world problems.
                 </p>
                 <div className="hero-actions">
@@ -110,20 +110,24 @@ function App() {
               <div className="about-text">
                 <h2>About</h2>
                 <p>
-                  Hello! I&apos;m Amit, a developer with a deep passion for turning complex challenges into
-                  elegant code. My expertise lies at the intersection of computer vision, machine learning,
-                  and practical software development.
+                  I&apos;m Amit Chakdhare, a B.Tech AI student (Class of 2027) passionate about building
+                  intelligent systems at the intersection of Machine Learning, Computer Vision, and Software
+                  Development.
                 </p>
                 <p>
-                  I thrive on building projects that push boundaries, from advanced 3D object detection
-                  systems that understand the world to real-time hazard detection for automotive safety.
-                  I&apos;m equally comfortable working on the algorithm behind an AR gesture control system and
-                  the full-stack application that brings it to life.
+                  I enjoy turning ideas into real-world applications whether it&apos;s training deep learning
+                  models, working with data pipelines, or building interactive web interfaces using React and
+                  TypeScript. My work spans across Python-based ML ecosystems (PyTorch, TensorFlow,
+                  Scikit-learn) and full-stack fundamentals.
                 </p>
                 <p>
-                  My current interests are leading me to explore the exciting applications of AI in space
-                  technology and beyond. I believe in continuous learning, clean code, and the power of open
-                  source.
+                  I&apos;m especially interested in solving complex problems using AI, with a growing focus on
+                  computer vision and real-time systems. I also explore cloud technologies like AWS and
+                  Google Cloud to understand how scalable AI systems are built and deployed.
+                </p>
+                <p>
+                  Beyond coding, I&apos;m driven by curiosity about space and emerging technologies, and I&apos;m
+                  always looking to push my limits through projects, internships, and collaborations.
                 </p>
               </div>
             </div>
@@ -240,7 +244,10 @@ function App() {
               <div className="project-split">
                 <div className="project-summary">
                   <h3>Integrated-Object-Pose-Detection-Pipeline</h3>
-                  <p>Your most popular repository focused on object pose detection in Python.</p>
+                  <p>
+                    A computer vision pipeline that performs object detection and pose estimation on images
+                    and videos using a modular, real-time processing approach.
+                  </p>
                   <div className="project-links">
                     <a
                       className="repo-link"
@@ -272,7 +279,10 @@ function App() {
               <div className="project-split">
                 <div className="project-summary">
                   <h3>Lane-Detection-Object-Hazard-System</h3>
-                  <p>A Jupyter Notebook project for lane detection and hazard-aware insights.</p>
+                  <p>
+                    A vision-based system that detects road lanes and identifies potential hazards from video
+                    input through multi-stage real-time processing.
+                  </p>
                   <div className="project-links">
                     <a
                       className="repo-link"
@@ -304,7 +314,10 @@ function App() {
               <div className="project-split">
                 <div className="project-summary">
                   <h3>Enhanced-MediaPipe-Pose-Estimation</h3>
-                  <p>Computer vision work extending pose estimation pipelines using Python.</p>
+                  <p>
+                    A real-time pose estimation system that detects and tracks human body keypoints with
+                    continuous tracking and visualization.
+                  </p>
                   <div className="project-links">
                     <a
                       className="repo-link"
@@ -336,7 +349,10 @@ function App() {
               <div className="project-split">
                 <div className="project-summary">
                   <h3>Hello-Sakhi</h3>
-                  <p>A women-focused portal with practical frontend development and an empowerment-first UX.</p>
+                  <p>
+                    An HTML-based website designed to help users report cases related to women&apos;s safety,
+                    focusing on accessibility and user-friendly reporting.
+                  </p>
                   <div className="project-links">
                     <a
                       className="repo-link"
@@ -374,7 +390,10 @@ function App() {
               <div className="project-split">
                 <div className="project-summary">
                   <h3>Photo_Studio</h3>
-                  <p>A JavaScript photo booth experience focused on creative filters and instant captures.</p>
+                  <p>
+                    A simple camera application that allows users to capture photos with different layouts,
+                    providing an enhanced photo-taking experience.
+                  </p>
                   <div className="project-links">
                     <a
                       className="repo-link"
