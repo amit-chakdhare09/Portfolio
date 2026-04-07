@@ -759,6 +759,7 @@ p {
   position: fixed;
   right: 5%;
   bottom: 5%;
+  --meow-x-offset: clamp(58px, 22%, 120px);
   z-index: 25;
   pointer-events: auto;
   display: flex;
@@ -777,8 +778,8 @@ p {
 
 .meow-popup {
   position: absolute;
-  right: 8px;
-  bottom: calc(100% + 2px);
+  left: var(--meow-x-offset);
+  bottom: calc(100% - 35px);
   padding: 0.38rem 0.65rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.96);
@@ -798,7 +799,7 @@ p {
 .meow-popup::after {
   content: "";
   position: absolute;
-  right: 12px;
+  left: 70%;
   top: calc(100% - 1px);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -1011,6 +1012,10 @@ p {
 
   .corner-gif {
     width: clamp(175px, 55vw, 275px);
+  }
+
+  .corner-gif-wrap {
+    --meow-x-offset: clamp(22px, 18%, 70px);
   }
 }
 
