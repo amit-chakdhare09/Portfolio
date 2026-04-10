@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# Amit Chakdhare Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for **Amit Omprakash Chakdhare**, focused on Machine Learning, Computer Vision, and Software Development.
 
-Currently, two official plugins are available:
+Built with **React + TypeScript + Vite**, with interactive UI/animation effects powered by GSAP, Locomotive Scroll, and Three.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Highlights
 
-## React Compiler
+- Responsive single-page portfolio (desktop + mobile)
+- Animated gradient WebGL background
+- Horizontal pinned projects section
+- Project cards with GitHub + live demo links
+- Skills section grouped by domain
+- Custom cursor and mascot interaction
+- Skeleton loading states for media
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- CSS (custom styling)
+- GSAP + ScrollTrigger (CDN)
+- Locomotive Scroll (CDN)
+- Three.js (CDN)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project Structure
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+Portfolio/
+├─ src/
+│  ├─ App.tsx          # Main React page layout/content
+│  └─ main.tsx         # React entry point
+├─ assets/             # Local media assets used in the portfolio
+├─ style.css           # Global styles
+├─ script.js           # Runtime interaction/animation logic
+├─ index.html          # Vite HTML entry + CDN includes
+└─ package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 1. Install dependencies
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 2. Start development server
+
+```bash
+npm run dev
+```
+
+### 3. Build for production
+
+```bash
+npm run build
+```
+
+### 4. Preview production build
+
+```bash
+npm run preview
+```
+
+## Available Scripts
+
+- `npm run dev` - Run Vite dev server
+- `npm run build` - Type-check and build production bundle
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint checks
+
+## Notes
+
+- External animation libraries are loaded from CDN in `index.html`.
+- `script.js` initializes interactive effects after React mounts.
+- If `Amit_Chakdhare_Resume.pdf` is missing, the resume button is disabled automatically.
+
+## License
+
+MIT - see [LICENSE](./LICENSE)
