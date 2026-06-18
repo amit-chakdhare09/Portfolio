@@ -78,7 +78,7 @@ function App() {
                   <a
                     className="btn ghost"
                     id="resumeButton"
-                    href="/assets/Amit_Chakdhare_Resume.pdf"
+                    href="\assets\AmitChakdhareResume (1) (1).pdf"
                     download
                   >
                     Download Resume
@@ -448,6 +448,9 @@ function App() {
                   </a>
                   <a href="https://www.kaggle.com/amitchakdhare" target="_blank" rel="noopener noreferrer">
                     Kaggle
+                  </a>
+                  <a href="mailto:amitchakdhare@gmail.com" target="_blank" rel="noopener noreferrer">
+                    Email
                   </a>
                 </div>
               </div>
