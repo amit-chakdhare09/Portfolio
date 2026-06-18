@@ -7,6 +7,7 @@ import contactImage from "../assets/contact-image.jpeg";
 import cornerMascot from "../assets/corner-mascot.gif";
 import helloSakhiImage from "../assets/hello-sakhi.png";
 import photoBoothImage from "../assets/photo-booth.png";
+import resumePdf from "../assets/AmitChakdhareResume (1) (1).pdf";
 
 function App() {
   useEffect(() => {
@@ -78,7 +79,7 @@ function App() {
                   <a
                     className="btn ghost"
                     id="resumeButton"
-                    href="\assets\AmitChakdhareResume (1) (1).pdf"
+                    href={resumePdf}
                     download
                   >
                     Download Resume

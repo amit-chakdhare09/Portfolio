@@ -8,6 +8,7 @@ This project is built with **React + TypeScript + Vite**, with advanced UI/inter
 
 - Portfolio: `localhost` during development (`npm run dev`)
 - GitHub: [amit-chakdhare09/Portfolio](https://github.com/amit-chakdhare09/Portfolio)
+- GitHub Pages: deploys automatically from `main` via GitHub Actions
 
 ## Core Features
 
@@ -96,6 +97,14 @@ npm run preview
 - `npm run build` - Run TypeScript build + Vite production build
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint checks
+
+## GitHub Pages Deployment
+
+This repo is configured for GitHub Pages deployment using GitHub Actions.
+
+1. In the GitHub repository settings, set Pages source to **GitHub Actions**.
+2. Push changes to `main`.
+3. The workflow builds the site and deploys the Vite `dist` output automatically.
 
 ## Implementation Notes
 
